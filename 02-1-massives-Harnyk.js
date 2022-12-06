@@ -70,14 +70,14 @@
 // const c = [1, 2, 3]
 // const d = [1, 2, 3]
 // console.log(c === d) // false
-// console.log(c[0] === d[0]) // true 
+// console.log(c[0] === d[0]) // true
 
-const e = [1, 2, [3, 4]]
-const f = [1, 2, [3, 4]]
-console.log(e[2] === f[2]) // false
-console.log(e[2][0]) // 3
+// const e = [1, 2, [3, 4]]
+// const f = [1, 2, [3, 4]]
+// console.log(e[2] === f[2]) // false потому что сравнивается ссылка одного масива и другого
+// console.log(e[2][0]) // 3 можемо обратится к элементу массива в массиве
 
-
+ /*SPLIT - метод строки, который разделяет строку на массив элементов*/
 // const string = '1-!2-!3-!4-!5-!6-!7-!8-!9'
 
 // console.log(string.split('!'))
@@ -93,61 +93,69 @@ console.log(e[2][0]) // 3
 // const string3 = array3.join('***')
 // console.log(string3)
 
-
+/*includes - метод строки, который отвечает, есть ли элемент а массиве или нет*/
 // const array5 = [1,4,6,7,4,7,89]
-// // const res1 = array5.includes(100 && 4)
-// // console.log(res1) // true
+// const res1 = array5.includes(100 && 4) //результат true - поэтому нельзя так искать, так как вначале будет определено значение выражения 100 && 4, а потом будет искаться 4ка в массиве*/
+// console.log(res1) // true
 // const res2 = array5.includes(100) && array5.includes(4)
 // console.log(res2) // false
-
-// const emptyArray = [0, 90]
-// const length = emptyArray.push(1, 2, 3, 100, 200, 1000, 100000)
+ 
+/*PUSH - метод додає в масив вказані елементи, а повертає довжину*/
+// const emptyArray = []
+// const q = emptyArray.push(1, 2, 3, 100, 200, 1000, 100000)
 // console.log(emptyArray)
-// console.log(length)
+// console.log(q)// 7 - передав довжину
 
+/*POP - метод видаляє в масиві по одному елементу з кінця, а повертає видалений елемент*/
 // const notEmptyArray = [1, 2, 3, 4, 5]
 // const deletedEl = notEmptyArray.pop()
 // console.log(notEmptyArray)
 // console.log(deletedEl)
 
+/*unshift - метод  додавання на початку*/
 // const superArray = [1, 2, 3, 4, 5]
 // const length1 = superArray.unshift(5, 10)
-// console.log(superArray) 
+// console.log(superArray)
 // console.log(length1)
 
+// /*shift - метод віднімання на початку*/
 // const superArray1 = [1, 2, 3, 4, 5]
 // const deletedEl1 = superArray1.shift()
 // console.log(superArray1)
 // console.log(deletedEl1)
 
+/*slice - метод  */
 // const array6 = [1, 2, 3, 4, 5, 6, 7]
 // const array7 = array6.slice(0, 5)
-// // console.log(array7)
-// const array8 = array6.slice(-2)
+// console.log(array7)
+// const array8 = array6.slice(-2) //
 // console.log(array8)
 // console.log(array6)
 
-
+/*slpice - метод  деструктивний, можна видалити, додати елементи, метод тільки для масива на відміну від slice */
 // const numbers2 = [1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 9]
-// const copy = numbers2.slice()
-// const deleted = copy.splice(5, 2)
+// const copy = numbers2.slice() //копія, якщо потрібно зберегти
+/*slpice - видаляємо з допомогою метода*/
+// const deleted = copy.splice(5, 2) //повертає масив, який видалили
 // console.log(copy)
 // console.log(deleted)
 // console.log(numbers2)
 
+/*slpice - додаємо з допомогою метода*/
 // const numbers3 = [1, 2, 3, 6, 7, 8, 9]
 // const copy1 = numbers3.slice()
-// const deleted1 = copy1.splice(3, 0, 4, 5)
+// const deleted1 = copy1.splice(3, 0, 4, 5) //додаємо елементи
 // console.log(copy1)
 // console.log(deleted1)
 
+/*slpice - замінюємо з допомогою метода*/
 // const numbers4 = [1, 2, 3, 4, 4, 4, 7]
 // const copy2 = numbers4.slice()
 // const deleted2 = copy2.splice(4, 2, 5, 6)
 // console.log(copy2)
 // console.log(deleted2)
 
-
+/*concat - поєднуємо*/
 // const a = [1, 2, 3];
 // const b = [5, 6, 7]
 // const c = 4
